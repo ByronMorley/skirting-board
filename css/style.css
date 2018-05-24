@@ -1,0 +1,12 @@
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*  1170px  */
+/*  1170px  */
+/*  970px   */
+/*  750px   */
+/*  100%    */
+/*  100%    */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&amp;subset=latin-ext);
+
+header {
+  background-color: #000;
+}

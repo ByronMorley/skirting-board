@@ -1,0 +1,7 @@
+---
+Name: SkirtingBorad
+After: 'framework/*','cms/*'
+---
+Page:
+  extensions:
+    - SkirtingBoard
