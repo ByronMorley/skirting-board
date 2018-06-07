@@ -1,3 +1,240 @@
-header {
-    background-color:#000;
+@import "../_core/_config.less";
+
+/*-----------------------------------------
+          SKIRTING BOARD.LESS
+-----------------------------------------*/
+
+@width: 300px;
+@background-color: @dark-color;
+
+@head-height: 60px;
+@head-color: #ccc;
+
+@link-height: 60px;
+
+@icon-width: @head-height;
+@menu-icon-size: 30px;
+@menu-icon-color: @mid-grey;
+@menu-icon-hover: @dark-color;
+
+@unit-width: 50px;
+
+.sb-nav {
+
+    position: fixed;
+    width: @width;
+    height: 100%;
+    top: 0;
+    z-index: 1001;
+    background-color: @background-color;
+
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+
+    &.right {
+        right: 0;
+        left: auto;
+
+        .sb-menu-toggle {
+            float: left;
+        }
+        &.open {
+
+            .sb-menu {
+                li {
+                    padding-left: 0;
+                }
+            }
+            .sb-menu-title {
+                &.sb-unit {
+                    width: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+        &.closed {
+            right: -(@width - @icon-width);
+            @media @MD, @LG, @XL {
+                right: -(@width);
+            }
+        }
+    }
+    &.left {
+        left: 0;
+        right: auto;
+
+        .sb-menu-toggle {
+            float: right;
+        }
+
+        .sb-menu-title {
+            float: right;
+        }
+
+        &.open {
+            .sb-menu {
+                li {
+                    padding-left: 0;
+                }
+            }
+            .sb-menu-title {
+                &.sb-unit {
+                    width: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+        &.closed {
+            left: -(@width - @icon-width);
+            @media @MD, @LG, @XL {
+                left: -(@width);
+            }
+        }
+    }
+
+    &.no-anim {
+        -webkit-transition-property: none;
+        -moz-transition-property: none;
+        -o-transition-property: none;
+        transition-property: none;
+    }
+
+
+
+}
+
+.sb-hamburger {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+
+    @media @MD, @LG, @XL {
+        display:block;
+    }
+    @media @SM, @XS, @XXS {
+        display:none;
+    }
+
+    .sb-menu-toggle {
+        float:right;
+    }
+
+}
+
+.sb-head {
+
+    height: @head-height;
+    background-color: @head-color;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.sb-body {
+
+}
+
+.sb-menu-toggle {
+
+    height: @head-height;
+    width: @icon-width;
+    text-align: center;
+    font-size: @menu-icon-size;
+    line-height: @head-height;
+    padding: 0 10px;
+    color: @menu-icon-color;
+
+    &:hover {
+        color: @menu-icon-hover;
+    }
+}
+
+.sb-menu {
+
+    width: 100%;
+    margin: 0;
+    padding: 5px 5px 0 5px;
+    overflow: hidden;
+    background-color: @dark-color;
+
+    a {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        font-weight: 800;
+        font-size: 18px;
+        color: @dark-color;
+        white-space: nowrap;
+        padding: 0;
+
+        height: @link-height;
+        line-height: @link-height;
+
+    }
+
+    li {
+
+        padding-left: 0;
+        -webkit-transition: ease all 0.5s;
+        -moz-transition: ease all 0.5s;
+        -o-transition: ease all 0.5s;
+        transition: ease all 0.5s;
+
+        a {
+
+            /******* default *******/
+
+            background-color: @dark-grey;
+            color: @light-color;
+            &:hover {
+                background-color: @alpha-color;
+                color: @light-color;
+            }
+            &.grand-parent {
+
+                background-color: @dark-grey;
+                color: @light-color;
+                &:hover {
+                    background-color: @alpha-color;
+                    color: @light-color;
+                }
+            }
+            &.parent {
+                height: 40px;
+                line-height: 40px;
+                background-color: @mid-grey;
+                color: @light-color;
+                &:hover {
+                    background-color: @alpha-color;
+                    color: @light-color;
+                }
+            }
+            &.child {
+                &:hover {
+
+                }
+            }
+        }
+    }
+
+}
+
+.sb-menu-title {
+    display: inline-block;
+    float: left;
+    &.sb-unit {
+        overflow: hidden;
+        width: @unit-width;
+        text-align: center;
+        -webkit-transition: ease all 0.5s;
+        -moz-transition: ease all 0.5s;
+        -o-transition: ease all 0.5s;
+        transition: ease all 0.5s;
+    }
+    &.sb-text {
+        padding: 0 10px;
+    }
 }

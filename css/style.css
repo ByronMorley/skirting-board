@@ -5,8 +5,185 @@
 /*  750px   */
 /*  100%    */
 /*  100%    */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&amp;subset=latin-ext);
 
-header {
-  background-color: #000;
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*  1170px  */
+/*  1170px  */
+/*  970px   */
+/*  750px   */
+/*  100%    */
+/*  100%    */
+/*-----------------------------------------
+          SKIRTING BOARD.LESS
+-----------------------------------------*/
+.sb-nav {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  z-index: 1001;
+  background-color: #000000;
+  -webkit-transition: ease all 0.5s;
+  -moz-transition: ease all 0.5s;
+  -o-transition: ease all 0.5s;
+  transition: ease all 0.5s;
+}
+.sb-nav.right {
+  right: 0;
+  left: auto;
+}
+.sb-nav.right .sb-menu-toggle {
+  float: left;
+}
+.sb-nav.right.open .sb-menu li {
+  padding-left: 0;
+}
+.sb-nav.right.open .sb-menu-title.sb-unit {
+  width: 0;
+  padding-left: 0;
+}
+.sb-nav.right.closed {
+  right: -240px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 1400px) {
+  .sb-nav.right.closed {
+    right: -300px;
+  }
+}
+.sb-nav.left {
+  left: 0;
+  right: auto;
+}
+.sb-nav.left .sb-menu-toggle {
+  float: right;
+}
+.sb-nav.left .sb-menu-title {
+  float: right;
+}
+.sb-nav.left.open .sb-menu li {
+  padding-left: 0;
+}
+.sb-nav.left.open .sb-menu-title.sb-unit {
+  width: 0;
+  padding-left: 0;
+}
+.sb-nav.left.closed {
+  left: -240px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 1400px) {
+  .sb-nav.left.closed {
+    left: -300px;
+  }
+}
+.sb-nav.no-anim {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+.sb-hamburger {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 1400px) {
+  .sb-hamburger {
+    display: block;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px), only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
+  .sb-hamburger {
+    display: none;
+  }
+}
+.sb-hamburger .sb-menu-toggle {
+  float: right;
+}
+.sb-head {
+  height: 60px;
+  background-color: #ccc;
+  width: 100%;
+  overflow: hidden;
+}
+.sb-menu-toggle {
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  padding: 0 10px;
+  color: #9D9D9D;
+}
+.sb-menu-toggle:hover {
+  color: #000000;
+}
+.sb-menu {
+  width: 100%;
+  margin: 0;
+  padding: 5px 5px 0 5px;
+  overflow: hidden;
+  background-color: #000000;
+}
+.sb-menu a {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 18px;
+  color: #000000;
+  white-space: nowrap;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+}
+.sb-menu li {
+  padding-left: 0;
+  -webkit-transition: ease all 0.5s;
+  -moz-transition: ease all 0.5s;
+  -o-transition: ease all 0.5s;
+  transition: ease all 0.5s;
+}
+.sb-menu li a {
+  /******* default *******/
+  background-color: #232323;
+  color: #FFFFFF;
+}
+.sb-menu li a:hover {
+  background-color: #6E348C;
+  color: #FFFFFF;
+}
+.sb-menu li a.grand-parent {
+  background-color: #232323;
+  color: #FFFFFF;
+}
+.sb-menu li a.grand-parent:hover {
+  background-color: #6E348C;
+  color: #FFFFFF;
+}
+.sb-menu li a.parent {
+  height: 40px;
+  line-height: 40px;
+  background-color: #9D9D9D;
+  color: #FFFFFF;
+}
+.sb-menu li a.parent:hover {
+  background-color: #6E348C;
+  color: #FFFFFF;
+}
+.sb-menu-title {
+  display: inline-block;
+  float: left;
+}
+.sb-menu-title.sb-unit {
+  overflow: hidden;
+  width: 50px;
+  text-align: center;
+  -webkit-transition: ease all 0.5s;
+  -moz-transition: ease all 0.5s;
+  -o-transition: ease all 0.5s;
+  transition: ease all 0.5s;
+}
+.sb-menu-title.sb-text {
+  padding: 0 10px;
 }

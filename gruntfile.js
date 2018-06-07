@@ -54,7 +54,7 @@ module.exports = function (grunt) {
                 tasks: ['concat', 'uglify:build'],
                 options: {
                     atBegin: true,
-                    livereload: false
+                    livereload: true
                 }
             },
             styles: {
@@ -62,14 +62,14 @@ module.exports = function (grunt) {
                 tasks: ['less', 'cssmin'],
                 options: {
                     nospawn: true,
-                    livereload: false
+                    livereload: true
                 }
             },
             templates: {
                 files: ['templates/**/*.ss'], // which files to watch
                 options: {
                     nospawn: true,
-                    livereload: false
+                    livereload: true
                 }
             }
         }
