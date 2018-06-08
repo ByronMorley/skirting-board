@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $('.sb-menu-toggle').addClass('open');
+    $('.sb-nav').addClass('open');
     var menu = localStorage.getItem('menu');
     if (menu === "closed") {
         toggleMenu(false);
@@ -7,6 +8,11 @@ $(document).ready(function () {
     $('.sb-menu-toggle').on('click', function () {
         toggleMenu(true);
     });
+
+    $('.sb-menu a').on('click', function(){
+        localStorage.setItem("menu", "closed");
+    });
+    checkMenuPosition($('.sb-nav'));
 });
 
 
