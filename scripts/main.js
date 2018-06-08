@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     $('.sb-menu a').on('click', function(){
-        localStorage.setItem("menu", "closed");
+        //localStorage.setItem("menu", "closed");
     });
     checkMenuPosition($('.sb-nav'));
 });
