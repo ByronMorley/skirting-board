@@ -13,15 +13,6 @@ class SkirtingBoard extends DataExtension
 
 	private static $has_many = array();
 
-	public function contentControllerInit()
-	{
-		Requirements::css('components/font-awesome/css/font-awesome.min.css');
-		Requirements::css(SKIRTING_BOARD_DIR . '/css/style.min.css');
-
-		Requirements::javascript('components/jquery/jquery.min.js');
-		Requirements::javascript(SKIRTING_BOARD_DIR . '/js/main.min.js');
-	}
-
 	public function getCMSFields()
 	{
 		$fields = parent::getCMSFields();

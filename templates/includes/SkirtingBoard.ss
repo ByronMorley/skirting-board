@@ -1,3 +1,7 @@
+<% require css('components/font-awesome/css/font-awesome.min.css') %>
+<% require css('skirting-board/css/style.min.css') %>
+<% require javascript('components/jquery/jquery.min.js') %>
+<% require javascript('skirting-board/js/main.js') %>
 <nav class="sb-nav right">
 	<div class="sb-head">
 		<div class="panel">
