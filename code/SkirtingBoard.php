@@ -24,19 +24,19 @@ class SkirtingBoard extends DataExtension
 	{
 		$fields->addFieldToTab('Root.Menu', TextField::create('Unit'));
 	}
-<<<<<<< HEAD
 
-	public function getMenubyName($menu){
+
+	public function getMenubyName($menu)
+	{
 		return SiteTree::get()->filter('URLSegment', $menu)->first();
 	}
 
-	public function SkirtingBoardMenu(){
+	public function SkirtingBoardMenu()
+	{
 
 		$arrayData = new ArrayData(array(
-			'Menu'=> $this->getMenubyName('main-menu')
+			'Menu' => $this->getMenubyName('main-menu')
 		));
 		return $arrayData->renderWith('Menus/SkirtingBoard');
 	}
-=======
->>>>>>> 48d04252a35ce43b2551d4eb3edb290202c5ab2b
 }
