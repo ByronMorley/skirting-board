@@ -1,7 +1,3 @@
-<% require css('components/font-awesome/css/font-awesome.min.css') %>
-<% require css('skirting-board/css/style.min.css') %>
-<% require javascript('components/jquery/jquery.min.js') %>
-<% require javascript('skirting-board/js/main.js') %>
 <nav class="sb-nav right">
 	<div class="sb-head">
 		<div class="panel">
@@ -9,7 +5,7 @@
 		</div>
 	</div>
 	<div class="panel sb-body">
-        <% control $Menu %>
+        <% control $Menu(1) %>
 			<ul class="sb-menu">
 				<li>
 					<a href="$Link" class="grand-parent">
