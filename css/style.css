@@ -125,6 +125,9 @@
   overflow: hidden;
   background-color: #000000;
 }
+.sb-menu .sb-sub-menu {
+  display: none;
+}
 .sb-menu a {
   display: block;
   margin-bottom: 5px;
